@@ -11,6 +11,24 @@
 		D2BA24E925D4606F00BB7B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24E825D4606F00BB7B5E /* ContentView.swift */; };
 		D2BA24EB25D4607100BB7B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BA24EA25D4607100BB7B5E /* Assets.xcassets */; };
 		D2BA24EE25D4607100BB7B5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BA24ED25D4607100BB7B5E /* Preview Assets.xcassets */; };
+		D2BA24FB25D460B900BB7B5E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24F725D460B900BB7B5E /* State.swift */; };
+		D2BA24FC25D460B900BB7B5E /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24F825D460B900BB7B5E /* Actions.swift */; };
+		D2BA24FD25D460B900BB7B5E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24F925D460B900BB7B5E /* Store.swift */; };
+		D2BA24FE25D460B900BB7B5E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24FA25D460B900BB7B5E /* Environment.swift */; };
+		D2BA250325D4611900BB7B5E /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA250225D4611900BB7B5E /* ProjectColors.swift */; };
+		D2BA250725D461B500BB7B5E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA250625D461B500BB7B5E /* Project.swift */; };
+		D2BA250B25D4622700BB7B5E /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA250A25D4622700BB7B5E /* Style.swift */; };
+		D2BA250E25D464FB00BB7B5E /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA250D25D464FB00BB7B5E /* UIColor+HexString.swift */; };
+		D2BA251125D46E4200BB7B5E /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA251025D46E4200BB7B5E /* PrimaryButton.swift */; };
+		D2BA251525D4770C00BB7B5E /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA251425D4770C00BB7B5E /* ProjectView.swift */; };
+		D2BA251925D47A2300BB7B5E /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA251825D47A2300BB7B5E /* ProjectHeaderView.swift */; };
+		D2BA251C25D47E8F00BB7B5E /* ProjectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA251B25D47E8F00BB7B5E /* ProjectDateView.swift */; };
+		D2BA251F25D4809700BB7B5E /* ModalCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA251E25D4809700BB7B5E /* ModalCalendarPicker.swift */; };
+		D2BA252225D4818900BB7B5E /* CreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA252125D4818900BB7B5E /* CreateProjectView.swift */; };
+		D2BA252525D483B600BB7B5E /* ProjectHeaderSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA252425D483B600BB7B5E /* ProjectHeaderSelector.swift */; };
+		D2BA252925D48B5C00BB7B5E /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA252825D48B5C00BB7B5E /* ProjectListView.swift */; };
+		D2BA252C25D48E1100BB7B5E /* ProjectListViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA252B25D48E1100BB7B5E /* ProjectListViewItem.swift */; };
+		D2BA252F25D4961000BB7B5E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA252E25D4961000BB7B5E /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +38,24 @@
 		D2BA24EA25D4607100BB7B5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2BA24ED25D4607100BB7B5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2BA24EF25D4607100BB7B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2BA24F725D460B900BB7B5E /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		D2BA24F825D460B900BB7B5E /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		D2BA24F925D460B900BB7B5E /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D2BA24FA25D460B900BB7B5E /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D2BA250225D4611900BB7B5E /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
+		D2BA250625D461B500BB7B5E /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		D2BA250A25D4622700BB7B5E /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		D2BA250D25D464FB00BB7B5E /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		D2BA251025D46E4200BB7B5E /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		D2BA251425D4770C00BB7B5E /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		D2BA251825D47A2300BB7B5E /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
+		D2BA251B25D47E8F00BB7B5E /* ProjectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDateView.swift; sourceTree = "<group>"; };
+		D2BA251E25D4809700BB7B5E /* ModalCalendarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCalendarPicker.swift; sourceTree = "<group>"; };
+		D2BA252125D4818900BB7B5E /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
+		D2BA252425D483B600BB7B5E /* ProjectHeaderSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderSelector.swift; sourceTree = "<group>"; };
+		D2BA252825D48B5C00BB7B5E /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
+		D2BA252B25D48E1100BB7B5E /* ProjectListViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewItem.swift; sourceTree = "<group>"; };
+		D2BA252E25D4961000BB7B5E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +88,11 @@
 		D2BA24E525D4606F00BB7B5E /* ProjectApp */ = {
 			isa = PBXGroup;
 			children = (
+				D2BA251325D476F800BB7B5E /* Screens */,
+				D2BA250925D4621D00BB7B5E /* Style */,
+				D2BA250125D4610C00BB7B5E /* Views */,
+				D2BA250025D4610700BB7B5E /* Model */,
+				D2BA24F625D4608100BB7B5E /* State */,
 				D2BA24E625D4606F00BB7B5E /* ProjectAppApp.swift */,
 				D2BA24E825D4606F00BB7B5E /* ContentView.swift */,
 				D2BA24EA25D4607100BB7B5E /* Assets.xcassets */,
@@ -67,6 +108,59 @@
 				D2BA24ED25D4607100BB7B5E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2BA24F625D4608100BB7B5E /* State */ = {
+			isa = PBXGroup;
+			children = (
+				D2BA24F825D460B900BB7B5E /* Actions.swift */,
+				D2BA24FA25D460B900BB7B5E /* Environment.swift */,
+				D2BA24F725D460B900BB7B5E /* State.swift */,
+				D2BA24F925D460B900BB7B5E /* Store.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		D2BA250025D4610700BB7B5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2BA250225D4611900BB7B5E /* ProjectColors.swift */,
+				D2BA250625D461B500BB7B5E /* Project.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2BA250125D4610C00BB7B5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2BA251025D46E4200BB7B5E /* PrimaryButton.swift */,
+				D2BA251825D47A2300BB7B5E /* ProjectHeaderView.swift */,
+				D2BA251B25D47E8F00BB7B5E /* ProjectDateView.swift */,
+				D2BA251E25D4809700BB7B5E /* ModalCalendarPicker.swift */,
+				D2BA252425D483B600BB7B5E /* ProjectHeaderSelector.swift */,
+				D2BA252B25D48E1100BB7B5E /* ProjectListViewItem.swift */,
+				D2BA252E25D4961000BB7B5E /* ImagePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2BA250925D4621D00BB7B5E /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				D2BA250A25D4622700BB7B5E /* Style.swift */,
+				D2BA250D25D464FB00BB7B5E /* UIColor+HexString.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		D2BA251325D476F800BB7B5E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D2BA251425D4770C00BB7B5E /* ProjectView.swift */,
+				D2BA252125D4818900BB7B5E /* CreateProjectView.swift */,
+				D2BA252825D48B5C00BB7B5E /* ProjectListView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +232,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BA24FD25D460B900BB7B5E /* Store.swift in Sources */,
+				D2BA251925D47A2300BB7B5E /* ProjectHeaderView.swift in Sources */,
+				D2BA251125D46E4200BB7B5E /* PrimaryButton.swift in Sources */,
+				D2BA24FE25D460B900BB7B5E /* Environment.swift in Sources */,
+				D2BA251C25D47E8F00BB7B5E /* ProjectDateView.swift in Sources */,
 				D2BA24E925D4606F00BB7B5E /* ContentView.swift in Sources */,
+				D2BA24FC25D460B900BB7B5E /* Actions.swift in Sources */,
+				D2BA250325D4611900BB7B5E /* ProjectColors.swift in Sources */,
+				D2BA252225D4818900BB7B5E /* CreateProjectView.swift in Sources */,
+				D2BA252525D483B600BB7B5E /* ProjectHeaderSelector.swift in Sources */,
+				D2BA252C25D48E1100BB7B5E /* ProjectListViewItem.swift in Sources */,
+				D2BA252925D48B5C00BB7B5E /* ProjectListView.swift in Sources */,
+				D2BA251F25D4809700BB7B5E /* ModalCalendarPicker.swift in Sources */,
+				D2BA251525D4770C00BB7B5E /* ProjectView.swift in Sources */,
 				D2BA24E725D4606F00BB7B5E /* ProjectAppApp.swift in Sources */,
+				D2BA24FB25D460B900BB7B5E /* State.swift in Sources */,
+				D2BA250B25D4622700BB7B5E /* Style.swift in Sources */,
+				D2BA252F25D4961000BB7B5E /* ImagePicker.swift in Sources */,
+				D2BA250E25D464FB00BB7B5E /* UIColor+HexString.swift in Sources */,
+				D2BA250725D461B500BB7B5E /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
