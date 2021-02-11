@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,7 @@
 		D2911F9325D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */; };
 		D2911F9625D4D84300DC4C71 /* CGFloat+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9525D4D84300DC4C71 /* CGFloat+Layout.swift */; };
 		D2911F9925D4D85600DC4C71 /* Color+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9825D4D85600DC4C71 /* Color+Style.swift */; };
-		D2911F9D25D4DE1D00DC4C71 /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9C25D4DE1D00DC4C71 /* KeyboardAdaptive.swift */; };
+		D2911FA225D4E7DF00DC4C71 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2911FA125D4E7DF00DC4C71 /* IQKeyboardManagerSwift */; };
 		D2BA24E725D4606F00BB7B5E /* ProjectAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24E625D4606F00BB7B5E /* ProjectAppApp.swift */; };
 		D2BA24E925D4606F00BB7B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24E825D4606F00BB7B5E /* ContentView.swift */; };
 		D2BA24EB25D4607100BB7B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BA24EA25D4607100BB7B5E /* Assets.xcassets */; };
@@ -43,7 +43,6 @@
 		D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+SwipeGesture.swift"; sourceTree = "<group>"; };
 		D2911F9525D4D84300DC4C71 /* CGFloat+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Layout.swift"; sourceTree = "<group>"; };
 		D2911F9825D4D85600DC4C71 /* Color+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Style.swift"; sourceTree = "<group>"; };
-		D2911F9C25D4DE1D00DC4C71 /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
 		D2BA24E325D4606F00BB7B5E /* ProjectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BA24E625D4606F00BB7B5E /* ProjectAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppApp.swift; sourceTree = "<group>"; };
 		D2BA24E825D4606F00BB7B5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2911FA225D4E7DF00DC4C71 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,14 +88,6 @@
 				D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D2911F9B25D4DE0E00DC4C71 /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				D2911F9C25D4DE1D00DC4C71 /* KeyboardAdaptive.swift */,
-			);
-			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		D2BA24DA25D4606E00BB7B5E = {
@@ -163,7 +155,6 @@
 		D2BA250125D4610C00BB7B5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D2911F9B25D4DE0E00DC4C71 /* Modifiers */,
 				D2BA251025D46E4200BB7B5E /* PrimaryButton.swift */,
 				D2BA251825D47A2300BB7B5E /* ProjectHeaderView.swift */,
 				D2BA251B25D47E8F00BB7B5E /* ProjectDateView.swift */,
@@ -213,6 +204,9 @@
 			dependencies = (
 			);
 			name = ProjectApp;
+			packageProductDependencies = (
+				D2911FA125D4E7DF00DC4C71 /* IQKeyboardManagerSwift */,
+			);
 			productName = ProjectApp;
 			productReference = D2BA24E325D4606F00BB7B5E /* ProjectApp.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +234,9 @@
 				Base,
 			);
 			mainGroup = D2BA24DA25D4606E00BB7B5E;
+			packageReferences = (
+				D2911FA025D4E7DF00DC4C71 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = D2BA24E425D4606F00BB7B5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,7 +283,6 @@
 				D2BA251525D4770C00BB7B5E /* ProjectView.swift in Sources */,
 				D2BA24E725D4606F00BB7B5E /* ProjectAppApp.swift in Sources */,
 				D2BA24FB25D460B900BB7B5E /* State.swift in Sources */,
-				D2911F9D25D4DE1D00DC4C71 /* KeyboardAdaptive.swift in Sources */,
 				D2BA250B25D4622700BB7B5E /* Style.swift in Sources */,
 				D2911F8B25D4D6F800DC4C71 /* NavigationHeader.swift in Sources */,
 				D2BA252F25D4961000BB7B5E /* ImagePicker.swift in Sources */,
@@ -480,6 +476,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2911FA025D4E7DF00DC4C71 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2911FA125D4E7DF00DC4C71 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2911FA025D4E7DF00DC4C71 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2BA24DB25D4606E00BB7B5E /* Project object */;
 }

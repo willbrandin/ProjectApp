@@ -88,17 +88,12 @@ struct CreateProjectView: View {
     var contentView: some View {
         VStack {
             NavigationBindableHeader(title: "Create Project", isNavigationActive: $isCreateNavigationActive)
-            
             ProjectHeaderSelector(selectedColor: $selectedColor)
-            
             ProjectDateView(date: date, action: { calendarActive = true })
                 .padding(.top, .marginXL)
             
             TitledTextField(title: "Title", text: $titleText)
-                .ignoresSafeArea(.keyboard, edges: .bottom)
-            
             DescriptionTextEditor(text: $description)
-                .ignoresSafeArea(.keyboard, edges: .bottom)
             
             Spacer()
             
@@ -111,17 +106,11 @@ struct CreateProjectView: View {
         ZStack {
             Color.tintedWhite
                 .edgesIgnoringSafeArea(.all)
-                .onTapGesture {
-                    UIApplication.shared.endEditing()
-                }
             
             contentView
                 .blur(radius: calendarActive ? 8 : 0)
                 .animation(.interactiveSpring())
-                .onTapGesture {
-                    UIApplication.shared.endEditing()
-                }
-            
+               
             if calendarActive {
                 Color.black.opacity(0.5)
                     .edgesIgnoringSafeArea(.all)
