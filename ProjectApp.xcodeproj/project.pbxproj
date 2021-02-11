@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D28B7C3525D5CBEC001CE672 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B7C3425D5CBEC001CE672 /* UserDefaultsManager.swift */; };
+		D28B7C3A25D5DABE001CE672 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28B7C3925D5DABE001CE672 /* LaunchScreen.storyboard */; };
 		D2911F8B25D4D6F800DC4C71 /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */; };
 		D2911F8F25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F8E25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift */; };
 		D2911F9325D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D28B7C3425D5CBEC001CE672 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		D28B7C3925D5DABE001CE672 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
 		D2911F8E25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+EndEditing.swift"; sourceTree = "<group>"; };
 		D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+SwipeGesture.swift"; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				D2911F8E25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift */,
 				D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */,
 				D2911FAC25D5B45C00DC4C71 /* Date+Format.swift */,
+				D28B7C3425D5CBEC001CE672 /* UserDefaultsManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				D2BA251425D4770C00BB7B5E /* ProjectView.swift */,
 				D2BA252125D4818900BB7B5E /* CreateProjectView.swift */,
 				D2BA252825D48B5C00BB7B5E /* ProjectListView.swift */,
+				D28B7C3925D5DABE001CE672 /* LaunchScreen.storyboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D28B7C3A25D5DABE001CE672 /* LaunchScreen.storyboard in Resources */,
 				D2BA24EE25D4607100BB7B5E /* Preview Assets.xcassets in Resources */,
 				D2BA24EB25D4607100BB7B5E /* Assets.xcassets in Resources */,
 			);
@@ -295,6 +302,7 @@
 				D2BA24E725D4606F00BB7B5E /* ProjectAppApp.swift in Sources */,
 				D2BA24FB25D460B900BB7B5E /* State.swift in Sources */,
 				D2BA250B25D4622700BB7B5E /* Style.swift in Sources */,
+				D28B7C3525D5CBEC001CE672 /* UserDefaultsManager.swift in Sources */,
 				D2911F8B25D4D6F800DC4C71 /* NavigationHeader.swift in Sources */,
 				D2BA252F25D4961000BB7B5E /* ImagePicker.swift in Sources */,
 				D2911FA625D5995D00DC4C71 /* DescriptionTextEditor.swift in Sources */,

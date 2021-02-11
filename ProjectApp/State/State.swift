@@ -84,9 +84,12 @@ func appReducer(state: AppState, action: AppAction, environment: AppEnvironment 
             if let image = projectState.selectedImage {
                 let project = Project(id: environment.uuid(), date: date, title: projectState.title, description: projectState.description, header: image)
                 state.projects.append(project)
+                environment.saveProjects(state.projects)
+
             } else if let color = projectState.selectedColor {
                 let project = Project(id: environment.uuid(), date: date, title: projectState.title, description: projectState.description, header: color)
                 state.projects.append(project)
+                environment.saveProjects(state.projects)
             }
             
             state.navigationState.isCreateProjectNavActive = false
@@ -97,11 +100,10 @@ func appReducer(state: AppState, action: AppAction, environment: AppEnvironment 
         state.createProjectState.error = error
         
     case .loadProjects:
-        state.projects = []
+        state.projects = environment.getProjects()
         
-    default:
+    @unknown default:
         fatalError("ACTION NOT HANDLED BY REDUCER")
-        break
     }
     
     return state
