@@ -39,7 +39,7 @@ extension Project {
         self.date = date
         self.title = title
         self.description = description
-        self.header = header.pngData()
+        self.header = header.jpegData(compressionQuality: 1)
     }
 }
 

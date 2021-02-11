@@ -9,18 +9,18 @@ import SwiftUI
 
 struct ModalCalendarPicker: View {
     
-    var onSave: () -> Void = {}
-    @Binding var date: Date
+    @Binding var date: Date?
+    @State var localDate = Date()
     
     var body: some View {
         VStack {
-            DatePicker("Select a Date", selection: $date)
+            DatePicker("Select a Date", selection: $localDate)
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 .padding()
             
-            Button("Save Date", action: onSave)
+            Button("Save Date", action: { date = localDate })
                 .buttonStyle(PrimaryButtonStyle())
         }
     }

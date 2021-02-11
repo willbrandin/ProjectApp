@@ -13,6 +13,9 @@
 		D2911F9625D4D84300DC4C71 /* CGFloat+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9525D4D84300DC4C71 /* CGFloat+Layout.swift */; };
 		D2911F9925D4D85600DC4C71 /* Color+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9825D4D85600DC4C71 /* Color+Style.swift */; };
 		D2911FA225D4E7DF00DC4C71 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2911FA125D4E7DF00DC4C71 /* IQKeyboardManagerSwift */; };
+		D2911FA625D5995D00DC4C71 /* DescriptionTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911FA525D5995D00DC4C71 /* DescriptionTextEditor.swift */; };
+		D2911FAA25D5997C00DC4C71 /* TitledTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911FA925D5997C00DC4C71 /* TitledTextView.swift */; };
+		D2911FAD25D5B45C00DC4C71 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911FAC25D5B45C00DC4C71 /* Date+Format.swift */; };
 		D2BA24E725D4606F00BB7B5E /* ProjectAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24E625D4606F00BB7B5E /* ProjectAppApp.swift */; };
 		D2BA24E925D4606F00BB7B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24E825D4606F00BB7B5E /* ContentView.swift */; };
 		D2BA24EB25D4607100BB7B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BA24EA25D4607100BB7B5E /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+SwipeGesture.swift"; sourceTree = "<group>"; };
 		D2911F9525D4D84300DC4C71 /* CGFloat+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Layout.swift"; sourceTree = "<group>"; };
 		D2911F9825D4D85600DC4C71 /* Color+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Style.swift"; sourceTree = "<group>"; };
+		D2911FA525D5995D00DC4C71 /* DescriptionTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextEditor.swift; sourceTree = "<group>"; };
+		D2911FA925D5997C00DC4C71 /* TitledTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledTextView.swift; sourceTree = "<group>"; };
+		D2911FAC25D5B45C00DC4C71 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		D2BA24E325D4606F00BB7B5E /* ProjectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BA24E625D4606F00BB7B5E /* ProjectAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppApp.swift; sourceTree = "<group>"; };
 		D2BA24E825D4606F00BB7B5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			children = (
 				D2911F8E25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift */,
 				D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */,
+				D2911FAC25D5B45C00DC4C71 /* Date+Format.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +170,8 @@
 				D2BA252B25D48E1100BB7B5E /* ProjectListViewItem.swift */,
 				D2BA252E25D4961000BB7B5E /* ImagePicker.swift */,
 				D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */,
+				D2911FA525D5995D00DC4C71 /* DescriptionTextEditor.swift */,
+				D2911FA925D5997C00DC4C71 /* TitledTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +274,7 @@
 			files = (
 				D2911F9625D4D84300DC4C71 /* CGFloat+Layout.swift in Sources */,
 				D2BA24FD25D460B900BB7B5E /* Store.swift in Sources */,
+				D2911FAD25D5B45C00DC4C71 /* Date+Format.swift in Sources */,
 				D2911F8F25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift in Sources */,
 				D2BA251925D47A2300BB7B5E /* ProjectHeaderView.swift in Sources */,
 				D2911F9925D4D85600DC4C71 /* Color+Style.swift in Sources */,
@@ -281,11 +291,13 @@
 				D2BA252925D48B5C00BB7B5E /* ProjectListView.swift in Sources */,
 				D2BA251F25D4809700BB7B5E /* ModalCalendarPicker.swift in Sources */,
 				D2BA251525D4770C00BB7B5E /* ProjectView.swift in Sources */,
+				D2911FAA25D5997C00DC4C71 /* TitledTextView.swift in Sources */,
 				D2BA24E725D4606F00BB7B5E /* ProjectAppApp.swift in Sources */,
 				D2BA24FB25D460B900BB7B5E /* State.swift in Sources */,
 				D2BA250B25D4622700BB7B5E /* Style.swift in Sources */,
 				D2911F8B25D4D6F800DC4C71 /* NavigationHeader.swift in Sources */,
 				D2BA252F25D4961000BB7B5E /* ImagePicker.swift in Sources */,
+				D2911FA625D5995D00DC4C71 /* DescriptionTextEditor.swift in Sources */,
 				D2BA250E25D464FB00BB7B5E /* UIColor+HexString.swift in Sources */,
 				D2BA250725D461B500BB7B5E /* Project.swift in Sources */,
 			);

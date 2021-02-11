@@ -9,25 +9,27 @@ import SwiftUI
 
 struct ProjectListViewItem: View {
     
-    static let taskDateFormat: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter
-    }()
-    
     var project: Project
     
     var body: some View {
         VStack {
-            if let projectColor = project.headerColor {
-                Color(projectColor)
-                    .frame(height: 117)
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10).stroke(Color.greySecondary, lineWidth: 1)
-                    )
+            VStack {
+                if let image = project.headerImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                    
+                } else if let projectColor = project.headerColor {
+                    Color(projectColor)
+                    
+                }
             }
+            .frame(height: 117)
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10).stroke(Color.greySecondary, lineWidth: 1)
+            )
+            
             Spacer()
             
             HStack {
@@ -35,7 +37,7 @@ struct ProjectListViewItem: View {
                     .font(Font(Style.FontStyle.body))
                     .foregroundColor(.darkText)
                 Spacer()
-                Text("\(project.date, formatter: Self.taskDateFormat)")
+                Text("\(project.date.formattedProjectDate())")
                     .font(Font(Style.FontStyle.header2))
                     .foregroundColor(.brandOrange)
             }
@@ -54,6 +56,6 @@ struct ProjectListViewItem: View {
 
 struct ProjectListViewItem_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectListViewItem(project: Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: ProjectColor.purple))
+        ProjectListViewItem(project: Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: UIImage(named: "test")!))
     }
 }

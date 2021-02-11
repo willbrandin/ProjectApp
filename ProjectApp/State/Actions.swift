@@ -8,14 +8,21 @@
 import UIKit
 
 enum AppAction {
+    // Navigation Actions
     case addProjectActive(Bool)
-    case colorSelected(ProjectColor)
+    case viewProjectActive(Bool)
+    
+    // Create Actions
+    case colorSelected(ProjectColor?)
     case pickImageActive(Bool)
-    case didSelectImage(UIImage)
-    case didSelectDate(Date)
+    case didSelectImage(UIImage?)
+    case didSelectDate(Date?)
+    case setCalendarActive(Bool)
     case didUpdateTitle(String)
     case didUpdateDescription(String)
-    case saveProject(Project)
-    case projectsLoaded([Project])
-    case viewProject(Project)
+    case saveProject
+    case setError(String?)
+    
+    // Loading Projects
+    case loadProjects
 }

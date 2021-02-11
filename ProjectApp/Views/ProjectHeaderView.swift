@@ -16,6 +16,10 @@ struct ProjectHeaderView: View {
         VStack {
             if let image = project.headerImage {
                 Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 163)
+                
             } else if let color = project.headerColor {
                 Color(color)
             }

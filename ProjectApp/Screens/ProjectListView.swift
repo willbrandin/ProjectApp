@@ -7,23 +7,44 @@
 
 import SwiftUI
 
+struct ProjectListContainer: View {
+    
+    @EnvironmentObject var store: AppStore
+
+    var body: some View {
+        ProjectListView(projects: store.state.projects,
+                        createProjectActive: Binding(
+                            get: { return store.state.navigationState.isCreateProjectNavActive },
+                            set: { store.dispatch(action: .addProjectActive($0)) }
+                        ),
+                        viewProjectActive: Binding(
+                            get: { return store.state.navigationState.isViewProjectNavActive },
+                            set: { store.dispatch(action: .viewProjectActive($0)) }
+                        ))
+    }
+}
+
 struct ProjectListView: View {
     
-    var projects: [Project] = [
-        Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp. Not only that but I am currently binge listening to the Drive soundtrack", header: .brown)
-    ]
+    var projects: [Project]
     
-    @State var createProjectActive = false
-    @State var viewProjectActive = false
+    @Binding var createProjectActive: Bool
+    @Binding var viewProjectActive: Bool
+    
+    @State var viewProjectTest: UUID? = nil
 
     var contentView: some View {
         LazyVStack(spacing: .marginXL) {
             NavigationHeader(title: "Projects")
             
             ForEach(projects) { project in
-                NavigationLink(destination: ProjectView(project: project, isNavigationActive: $viewProjectActive), isActive: $viewProjectActive) {
-                    ProjectListViewItem(project: project)
-                }
+                NavigationLink(
+                    destination: ProjectView(project: project,
+                                             isNavigationActive: Binding(get: { return viewProjectTest != nil },
+                                                                         set: { viewProjectTest = $0 ? project.id : nil })),
+                    tag: project.id,
+                    selection: $viewProjectTest,
+                    label: { ProjectListViewItem(project: project) })
             }
         
             AddProjectButton(onTapAdd: { createProjectActive = true })
@@ -33,7 +54,7 @@ struct ProjectListView: View {
     var body: some View {
         ZStack {
             NavigationLink(
-                destination: CreateProjectView(isCreateNavigationActive: $createProjectActive),
+                destination: CreateProjectContainerView(),
                 isActive: $createProjectActive,
                 label: {
                     EmptyView()
@@ -53,8 +74,8 @@ struct ProjectListView_Previews: PreviewProvider {
     static var previews: some View {
         ProjectListView(projects: [
             Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: ProjectColor.blue),
-            Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: ProjectColor.purple)
-        ])
+            Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: UIImage(named: "test")!)
+        ], createProjectActive: .constant(false), viewProjectActive: .constant(false))
     }
 }
 

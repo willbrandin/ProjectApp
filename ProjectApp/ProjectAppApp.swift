@@ -22,11 +22,34 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct ProjectAppApp: App {
     
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate // add this line in the struct
-
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    @Environment(\.scenePhase) var scenePhase
+    @StateObject private var appStore = AppStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
+            .environmentObject(appStore)
+            .onAppear {
+                appStore.dispatch(action: .loadProjects)
+            }
+            .onChange(of: scenePhase) { scenePhase in
+                switch scenePhase {
+                case .active:
+                    appStore.dispatch(action: .loadProjects)
+                    print("FOREGROUND")
+                    
+                case .background:
+                    print("BACKGROUND")
+                    
+                default:
+                    print("\(scenePhase)")
+                    break
+                }
+            }
         }
     }
 }

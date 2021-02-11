@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ColorPickerRow: View {
     
-    @Binding var pickedImage: UIImage?
     @Binding var selectedColor: ProjectColor?
     
     var body: some View {
@@ -17,7 +16,6 @@ struct ColorPickerRow: View {
             ForEach(ProjectColor.allCases) { color in
                 Button(action: {
                     selectedColor = color
-                    pickedImage = nil
                 }) {
                     ZStack {
                         Color(color.colorRepresentation)
@@ -64,9 +62,8 @@ struct ImageSelectorButton: View {
 
 struct ProjectHeaderSelector: View {
     
-    @State var showImagePicker: Bool = false
-    @State var pickedImage: UIImage? = nil
-
+    @Binding var showImagePicker: Bool
+    @Binding var pickedImage: UIImage?
     @Binding var selectedColor: ProjectColor?
     
     var body: some View {
@@ -89,7 +86,7 @@ struct ProjectHeaderSelector: View {
             
             VStack {
                 Spacer()
-                ColorPickerRow(pickedImage: $pickedImage, selectedColor: $selectedColor)
+                ColorPickerRow(selectedColor: $selectedColor)
                     .padding(.bottom, .margin)
             }
         }
@@ -99,27 +96,8 @@ struct ProjectHeaderSelector: View {
         )
         .padding(.horizontal, .margin)
         .frame(height: 163)
-        .sheet(isPresented: $showImagePicker, onDismiss: {
-            self.showImagePicker = false
-        }, content: {
-            ImagePicker(image: Binding(
-                            get: {
-                                return self.pickedImage
-                            },
-                            set: {
-                                self.pickedImage = $0
-                                self.selectedColor = nil
-                            }),
-                        isShown: self.$showImagePicker)
+        .sheet(isPresented: $showImagePicker, content: {
+            ImagePicker(image: $pickedImage, isShown: self.$showImagePicker)
         })
-    }
-}
-
-struct ProjectHeaderSelector_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ProjectHeaderSelector(selectedColor: .constant(nil))
-            ProjectHeaderSelector(selectedColor: .constant(.blue))
-        }
     }
 }

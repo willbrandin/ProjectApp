@@ -9,11 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            ProjectListView()
-                .navigationBarTitle("Projects")
-                .navigationBarHidden(true)
-        }
+        ProjectListContainer()
+            .navigationBarTitle("Projects")
+            .navigationBarHidden(true)
     }
 }
 
