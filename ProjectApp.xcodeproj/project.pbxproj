@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2911F8B25D4D6F800DC4C71 /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */; };
+		D2911F8F25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F8E25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift */; };
+		D2911F9325D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */; };
+		D2911F9625D4D84300DC4C71 /* CGFloat+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9525D4D84300DC4C71 /* CGFloat+Layout.swift */; };
+		D2911F9925D4D85600DC4C71 /* Color+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9825D4D85600DC4C71 /* Color+Style.swift */; };
+		D2911F9D25D4DE1D00DC4C71 /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F9C25D4DE1D00DC4C71 /* KeyboardAdaptive.swift */; };
 		D2BA24E725D4606F00BB7B5E /* ProjectAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24E625D4606F00BB7B5E /* ProjectAppApp.swift */; };
 		D2BA24E925D4606F00BB7B5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA24E825D4606F00BB7B5E /* ContentView.swift */; };
 		D2BA24EB25D4607100BB7B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BA24EA25D4607100BB7B5E /* Assets.xcassets */; };
@@ -32,6 +38,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
+		D2911F8E25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+EndEditing.swift"; sourceTree = "<group>"; };
+		D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+SwipeGesture.swift"; sourceTree = "<group>"; };
+		D2911F9525D4D84300DC4C71 /* CGFloat+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Layout.swift"; sourceTree = "<group>"; };
+		D2911F9825D4D85600DC4C71 /* Color+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Style.swift"; sourceTree = "<group>"; };
+		D2911F9C25D4DE1D00DC4C71 /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
 		D2BA24E325D4606F00BB7B5E /* ProjectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BA24E625D4606F00BB7B5E /* ProjectAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAppApp.swift; sourceTree = "<group>"; };
 		D2BA24E825D4606F00BB7B5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2911F8D25D4D7BB00DC4C71 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2911F8E25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift */,
+				D2911F9225D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2911F9B25D4DE0E00DC4C71 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D2911F9C25D4DE1D00DC4C71 /* KeyboardAdaptive.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		D2BA24DA25D4606E00BB7B5E = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +117,7 @@
 		D2BA24E525D4606F00BB7B5E /* ProjectApp */ = {
 			isa = PBXGroup;
 			children = (
+				D2911F8D25D4D7BB00DC4C71 /* Extensions */,
 				D2BA251325D476F800BB7B5E /* Screens */,
 				D2BA250925D4621D00BB7B5E /* Style */,
 				D2BA250125D4610C00BB7B5E /* Views */,
@@ -133,6 +163,7 @@
 		D2BA250125D4610C00BB7B5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2911F9B25D4DE0E00DC4C71 /* Modifiers */,
 				D2BA251025D46E4200BB7B5E /* PrimaryButton.swift */,
 				D2BA251825D47A2300BB7B5E /* ProjectHeaderView.swift */,
 				D2BA251B25D47E8F00BB7B5E /* ProjectDateView.swift */,
@@ -140,6 +171,7 @@
 				D2BA252425D483B600BB7B5E /* ProjectHeaderSelector.swift */,
 				D2BA252B25D48E1100BB7B5E /* ProjectListViewItem.swift */,
 				D2BA252E25D4961000BB7B5E /* ImagePicker.swift */,
+				D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +181,8 @@
 			children = (
 				D2BA250A25D4622700BB7B5E /* Style.swift */,
 				D2BA250D25D464FB00BB7B5E /* UIColor+HexString.swift */,
+				D2911F9525D4D84300DC4C71 /* CGFloat+Layout.swift */,
+				D2911F9825D4D85600DC4C71 /* Color+Style.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -232,10 +266,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2911F9625D4D84300DC4C71 /* CGFloat+Layout.swift in Sources */,
 				D2BA24FD25D460B900BB7B5E /* Store.swift in Sources */,
+				D2911F8F25D4D7CC00DC4C71 /* UIApplication+EndEditing.swift in Sources */,
 				D2BA251925D47A2300BB7B5E /* ProjectHeaderView.swift in Sources */,
+				D2911F9925D4D85600DC4C71 /* Color+Style.swift in Sources */,
 				D2BA251125D46E4200BB7B5E /* PrimaryButton.swift in Sources */,
 				D2BA24FE25D460B900BB7B5E /* Environment.swift in Sources */,
+				D2911F9325D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift in Sources */,
 				D2BA251C25D47E8F00BB7B5E /* ProjectDateView.swift in Sources */,
 				D2BA24E925D4606F00BB7B5E /* ContentView.swift in Sources */,
 				D2BA24FC25D460B900BB7B5E /* Actions.swift in Sources */,
@@ -248,7 +286,9 @@
 				D2BA251525D4770C00BB7B5E /* ProjectView.swift in Sources */,
 				D2BA24E725D4606F00BB7B5E /* ProjectAppApp.swift in Sources */,
 				D2BA24FB25D460B900BB7B5E /* State.swift in Sources */,
+				D2911F9D25D4DE1D00DC4C71 /* KeyboardAdaptive.swift in Sources */,
 				D2BA250B25D4622700BB7B5E /* Style.swift in Sources */,
+				D2911F8B25D4D6F800DC4C71 /* NavigationHeader.swift in Sources */,
 				D2BA252F25D4961000BB7B5E /* ImagePicker.swift in Sources */,
 				D2BA250E25D464FB00BB7B5E /* UIColor+HexString.swift in Sources */,
 				D2BA250725D461B500BB7B5E /* Project.swift in Sources */,

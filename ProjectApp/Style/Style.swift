@@ -45,21 +45,3 @@ struct Style {
         static let marginMax: CGFloat = 32
     }
 }
-
-extension Color {
-    static let tintedWhite = Color(Style.ColorStyle.tintedWhite)
-    static let brandBlue = Color(Style.ColorStyle.brandBlue)
-    static let brandOrange = Color(Style.ColorStyle.brandOrange)
-    static let darkText = Color(Style.ColorStyle.darkText)
-    static let darkTitle = Color(Style.ColorStyle.darkTitle)
-    static let greyPrimary = Color(Style.ColorStyle.greyPrimary)
-    static let greySecondary = Color(Style.ColorStyle.greySecondary)
-}
-
-extension CGFloat {
-    static let small = Style.Layout.small
-    static let padding = Style.Layout.padding
-    static let margin = Style.Layout.margin
-    static let marginXL = Style.Layout.marginXL
-    static let marginMax = Style.Layout.marginMax
-}

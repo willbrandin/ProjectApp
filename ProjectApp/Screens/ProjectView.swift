@@ -7,9 +7,30 @@
 
 import SwiftUI
 
+struct ProjectViewTextDetail: View {
+    var title: String
+    var detail: String
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: .margin) {
+                Text(title)
+                    .font(Font(Style.FontStyle.header))
+                Text(detail)
+                    .font(Font(Style.FontStyle.body))
+            }
+            
+            Spacer()
+        }
+        .padding(.horizontal, .margin)
+        .padding(.top, .marginXL)
+    }
+}
+
 struct ProjectView: View {
     
     var project: Project
+    @Binding var isNavigationActive: Bool
     
     var body: some View {
         ZStack {
@@ -17,52 +38,24 @@ struct ProjectView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text("Create Project")
-                    .font(Font(Style.FontStyle.title))
-                    .foregroundColor(.darkTitle)
-                    .padding(.top, .margin)
-                    .padding(.bottom, .marginMax + .margin)
-                
+                NavigationBindableHeader(title: "Create Project", isNavigationActive: $isNavigationActive)
                 ProjectHeaderView(project: project, height: 163)
-                    
                 ProjectDateView(date: project.date)
                     .padding(.top, .marginXL)
                 
-                HStack {
-                    VStack(alignment: .leading, spacing: .margin) {
-                        Text("Title")
-                            .font(Font(Style.FontStyle.header))
-                        Text(project.title)
-                            .font(Font(Style.FontStyle.body))
-                    }
-                    
-                    Spacer()
-                }
-                .padding(.horizontal, .margin)
-                .padding(.top, .marginXL)
-                
-                HStack {
-                    VStack(alignment: .leading, spacing: .margin) {
-                        Text("Description")
-                            .font(Font(Style.FontStyle.header))
-                        Text(project.description)
-                            .font(Font(Style.FontStyle.body))
-                            .lineSpacing(6)
-                    }
-                    
-                    Spacer()
-                }
-                .padding(.horizontal, .margin)
-                .padding(.top, .marginXL)
+                ProjectViewTextDetail(title: "Title", detail: project.title)
+                ProjectViewTextDetail(title: "Description", detail: project.description)
 
                 Spacer()
             }
         }
+        .navigationBarTitle("Project")
+        .navigationBarHidden(true)
     }
 }
 
 struct ProjectView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectView(project: Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: ProjectColor.blue))
+        ProjectView(project: Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: ProjectColor.blue), isNavigationActive: .constant(true))
     }
 }

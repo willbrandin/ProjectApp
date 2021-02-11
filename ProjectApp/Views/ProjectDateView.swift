@@ -22,7 +22,6 @@ struct ProjectDateView: View {
     @State private var selectedDate = Date()
     
     var body: some View {
-        
         Button(action: { action?() }) {
             HStack(spacing: .padding) {
                 Image("calendar")

@@ -7,6 +7,61 @@
 
 import SwiftUI
 
+struct ColorPickerRow: View {
+    
+    @Binding var pickedImage: UIImage?
+    @Binding var selectedColor: ProjectColor?
+    
+    var body: some View {
+        HStack(spacing: .margin) {
+            ForEach(ProjectColor.allCases) { color in
+                Button(action: {
+                    selectedColor = color
+                    pickedImage = nil
+                }) {
+                    ZStack {
+                        Color(color.colorRepresentation)
+                            .clipShape(Circle())
+                            .frame(width: 30, height: 30)
+                            .overlay(
+                                Circle().stroke(selectedColor == color ? Color.darkText : .clear, lineWidth: 1)
+                            )
+                        
+                        if selectedColor == color {
+                            Image("check")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct ImageSelectorButton: View {
+    
+    @Binding var showImagePicker: Bool
+    
+    var body: some View {
+        Button(action: { showImagePicker = true }) {
+            HStack {
+                Spacer()
+                
+                VStack {
+                    Spacer()
+                    Image("share")
+                    Text("Upload header image or choose color")
+                        .font(Font(Style.FontStyle.caption))
+                        .foregroundColor(.greyPrimary)
+                        .padding(.bottom, .marginXL)
+                    Spacer()
+                }
+                
+                Spacer()
+            }
+        }
+    }
+}
+
 struct ProjectHeaderSelector: View {
     
     @State var showImagePicker: Bool = false
@@ -30,48 +85,12 @@ struct ProjectHeaderSelector: View {
                 }
             }
             
-            Button(action: { showImagePicker = true }) {
-                HStack {
-                    Spacer()
-                    
-                    VStack {
-                        Spacer()
-                        Image("share")
-                        Text("Upload header image or choose color")
-                            .font(Font(Style.FontStyle.caption))
-                            .foregroundColor(.greyPrimary)
-                            .padding(.bottom, .marginXL)
-                        Spacer()
-                    }
-                    
-                    Spacer()
-                }
-            }
+            ImageSelectorButton(showImagePicker: $showImagePicker)
             
             VStack {
                 Spacer()
-                HStack(spacing: .margin) {
-                    ForEach(ProjectColor.allCases) { color in
-                        Button(action: {
-                            selectedColor = color
-                            pickedImage = nil
-                        }) {
-                            ZStack {
-                                Color(color.colorRepresentation)
-                                    .clipShape(Circle())
-                                    .frame(width: 30, height: 30)
-                                    .overlay(
-                                        Circle().stroke(selectedColor == color ? Color.darkText : .clear, lineWidth: 1)
-                                )
-                                
-                                if selectedColor == color {
-                                    Image("check")
-                                }
-                            }
-                        }
-                    }
-                }
-                .padding(.bottom, .margin)
+                ColorPickerRow(pickedImage: $pickedImage, selectedColor: $selectedColor)
+                    .padding(.bottom, .margin)
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
