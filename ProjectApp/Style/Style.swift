@@ -10,14 +10,14 @@ import SwiftUI
 
 struct Style {
     struct ColorStyle {
-        static let tintedWhite = UIColor(hexString: "F9FAFF")
-        static let brandBlue = UIColor(hexString: "4B6CDD")
-        static let brandOrange = UIColor(hexString: "EE9A4D")
-        static let darkText = UIColor(hexString: "1F1F1F")
-        static let darkTitle = UIColor(hexString: "2E2E2E")
-        static let greyPrimary = UIColor(hexString: "CECECE") // Light Text
-        static let greySecondary = UIColor(hexString: "E7E7E7") // Strokes and Borders
-
+        static let primaryBackground = UIColor(named: "primaryBackground")!
+        static let secondaryBackground = UIColor(named: "secondaryBackground")!
+        static let brandBlue = UIColor(named: "brandBlue")!
+        static let brandOrange = UIColor(named: "brandOrange")!
+        static let textPrimary = UIColor(named: "textPrimary")!
+        static let textSecondary = UIColor(named: "textSecondary")!
+        static let greyPrimary = UIColor(named: "greyPrimary")! // Light Text
+        static let greySecondary = UIColor(named: "greySecondary")! // Strokes and Borders
     }
     
     struct FontStyle {

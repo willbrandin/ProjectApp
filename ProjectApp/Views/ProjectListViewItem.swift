@@ -35,7 +35,7 @@ struct ProjectListViewItem: View {
             HStack {
                 Text(project.title)
                     .font(Font(Style.FontStyle.body))
-                    .foregroundColor(.darkText)
+                    .foregroundColor(.textPrimary)
                 Spacer()
                 Text("\(project.date.formattedProjectDate())")
                     .font(Font(Style.FontStyle.header2))

@@ -16,7 +16,7 @@ struct ModalCalendarPicker: View {
         VStack {
             DatePicker("Select a Date", selection: $localDate)
                 .datePickerStyle(GraphicalDatePickerStyle())
-                .background(Color.white)
+                .background(Color.secondaryBackground)
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 .padding()
             

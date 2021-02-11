@@ -8,11 +8,12 @@
 import SwiftUI
 
 extension Color {
-    static let tintedWhite = Color(Style.ColorStyle.tintedWhite)
+    static let primaryBackground = Color(Style.ColorStyle.primaryBackground)
+    static let secondaryBackground = Color(Style.ColorStyle.secondaryBackground)
     static let brandBlue = Color(Style.ColorStyle.brandBlue)
     static let brandOrange = Color(Style.ColorStyle.brandOrange)
-    static let darkText = Color(Style.ColorStyle.darkText)
-    static let darkTitle = Color(Style.ColorStyle.darkTitle)
+    static let textPrimary = Color(Style.ColorStyle.textPrimary)
+    static let textSecondary = Color(Style.ColorStyle.textSecondary)
     static let greyPrimary = Color(Style.ColorStyle.greyPrimary)
     static let greySecondary = Color(Style.ColorStyle.greySecondary)
 }

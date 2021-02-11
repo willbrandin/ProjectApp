@@ -89,7 +89,7 @@ struct CreateProjectView: View {
     
     var body: some View {
         ZStack {
-            Color.tintedWhite
+            Color.primaryBackground
                 .edgesIgnoringSafeArea(.all)
             
             contentView

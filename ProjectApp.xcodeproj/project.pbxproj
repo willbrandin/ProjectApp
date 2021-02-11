@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21CB46B25D5E00000F4FAF4 /* AddProjectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21CB46A25D5E00000F4FAF4 /* AddProjectButton.swift */; };
+		D21CB46F25D5E0FD00F4FAF4 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21CB46E25D5E0FD00F4FAF4 /* Color.xcassets */; };
 		D28B7C3525D5CBEC001CE672 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28B7C3425D5CBEC001CE672 /* UserDefaultsManager.swift */; };
 		D28B7C3A25D5DABE001CE672 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28B7C3925D5DABE001CE672 /* LaunchScreen.storyboard */; };
 		D2911F8B25D4D6F800DC4C71 /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D21CB46A25D5E00000F4FAF4 /* AddProjectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectButton.swift; sourceTree = "<group>"; };
+		D21CB46E25D5E0FD00F4FAF4 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		D28B7C3425D5CBEC001CE672 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		D28B7C3925D5DABE001CE672 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				D2BA24EA25D4607100BB7B5E /* Assets.xcassets */,
 				D2BA24EF25D4607100BB7B5E /* Info.plist */,
 				D2BA24EC25D4607100BB7B5E /* Preview Content */,
+				D21CB46E25D5E0FD00F4FAF4 /* Color.xcassets */,
 			);
 			path = ProjectApp;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				D2911F8A25D4D6F800DC4C71 /* NavigationHeader.swift */,
 				D2911FA525D5995D00DC4C71 /* DescriptionTextEditor.swift */,
 				D2911FA925D5997C00DC4C71 /* TitledTextView.swift */,
+				D21CB46A25D5E00000F4FAF4 /* AddProjectButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28B7C3A25D5DABE001CE672 /* LaunchScreen.storyboard in Resources */,
+				D21CB46F25D5E0FD00F4FAF4 /* Color.xcassets in Resources */,
 				D2BA24EE25D4607100BB7B5E /* Preview Assets.xcassets in Resources */,
 				D2BA24EB25D4607100BB7B5E /* Assets.xcassets in Resources */,
 			);
@@ -286,6 +293,7 @@
 				D2BA251925D47A2300BB7B5E /* ProjectHeaderView.swift in Sources */,
 				D2911F9925D4D85600DC4C71 /* Color+Style.swift in Sources */,
 				D2BA251125D46E4200BB7B5E /* PrimaryButton.swift in Sources */,
+				D21CB46B25D5E00000F4FAF4 /* AddProjectButton.swift in Sources */,
 				D2BA24FE25D460B900BB7B5E /* Environment.swift in Sources */,
 				D2911F9325D4D7EB00DC4C71 /* UINavigationController+SwipeGesture.swift in Sources */,
 				D2BA251C25D47E8F00BB7B5E /* ProjectDateView.swift in Sources */,

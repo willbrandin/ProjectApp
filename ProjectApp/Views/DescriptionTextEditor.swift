@@ -11,6 +11,12 @@ struct DescriptionTextEditor: View {
     
     @Binding var text: String
     
+    init(text: Binding<String>) {
+        self._text = text
+        
+        UITextView.appearance().backgroundColor = Style.ColorStyle.secondaryBackground
+    }
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: .margin) {
@@ -21,14 +27,14 @@ struct DescriptionTextEditor: View {
                     TextEditor(text: $text)
                         .font(Font(Style.FontStyle.body))
                         .padding(.padding)
-                        .background(Color.white)
-                        .foregroundColor(.darkText)
+                        .background(Color.secondaryBackground)
+                        .foregroundColor(.textPrimary)
                         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .overlay(
                             RoundedRectangle(cornerRadius: 8).stroke(Color.greySecondary, lineWidth: 1)
                         )
                         .frame(height: 57)
-                    
+
                     if text == "" {
                         Text("Type here")
                             .font(Font(Style.FontStyle.body))

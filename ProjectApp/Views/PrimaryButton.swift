@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PrimaryButtonStyle: ButtonStyle {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .font(Font(Style.FontStyle.header))
@@ -17,7 +20,11 @@ struct PrimaryButtonStyle: ButtonStyle {
             .background(Color.brandBlue)
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             .opacity(configuration.isPressed ? 0.4 : 1)
-            .shadow(color: Color(UIColor(hexString: "A1B1EA")), radius: 20, x: 0, y: 5)
+            .shadow(
+                color: Color(UIColor(hexString: "A1B1EA")).opacity(colorScheme == .dark ? 0 : 1),
+                radius: colorScheme == .dark ? 0 : 20,
+                x: 0,
+                y: colorScheme == .dark ? 0 : 5)
             .padding(.horizontal, .marginXL)
             .padding(.bottom, .margin)
     }

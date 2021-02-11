@@ -26,7 +26,7 @@ struct ProjectDateView: View {
             .foregroundColor(.brandOrange)
             .padding(.vertical, .margin)
             .frame(maxWidth: .infinity)
-            .background(Color.white)
+            .background(Color.secondaryBackground)
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 10).stroke(Color.greySecondary, lineWidth: 1)

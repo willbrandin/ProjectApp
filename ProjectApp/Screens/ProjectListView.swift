@@ -60,7 +60,7 @@ struct ProjectListView: View {
                     EmptyView()
                 })
             
-            Color.tintedWhite
+            Color.primaryBackground
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView {
@@ -76,34 +76,5 @@ struct ProjectListView_Previews: PreviewProvider {
             Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: ProjectColor.blue),
             Project(id: UUID(), date: Date(), title: "iOS Dev Challenge", description: "I was number 1 in Texas for Lord of the Rings on QuizUp", header: UIImage(named: "test")!)
         ], createProjectActive: .constant(false), viewProjectActive: .constant(false))
-    }
-}
-
-struct AddProjectButton: View {
-    
-    var onTapAdd: () -> Void = {}
-    
-    var body: some View {
-        ZStack {
-            Color.white
-            
-            Button(action: onTapAdd) {
-                HStack {
-                    Spacer()
-                    VStack {
-                        Spacer()
-                        Image("plus")
-                        Spacer()
-                    }
-                    Spacer()
-                }
-            }
-        }
-        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 10).stroke(Color.greySecondary, lineWidth: 1)
-        )
-        .padding(.horizontal, .margin)
-        .frame(height: 163)
     }
 }

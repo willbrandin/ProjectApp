@@ -20,9 +20,9 @@ struct TitledTextField: View {
                 
                 TextField("Type here", text: $text)
                     .font(Font(Style.FontStyle.body))
-                    .foregroundColor(.darkText)
+                    .foregroundColor(.textPrimary)
                     .padding(.padding)
-                    .background(Color.white)
+                    .background(Color.secondaryBackground)
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     .overlay(
                         RoundedRectangle(cornerRadius: 8).stroke(Color.greySecondary, lineWidth: 1)

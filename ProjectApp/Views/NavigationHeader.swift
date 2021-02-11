@@ -13,7 +13,7 @@ struct NavigationHeader: View {
     var body: some View {
         Text(title)
             .font(Font(Style.FontStyle.title))
-            .foregroundColor(.darkTitle)
+            .foregroundColor(.textSecondary)
             .padding(.top, .margin)
             .padding(.bottom, .marginMax)
     }
@@ -37,7 +37,7 @@ struct NavigationBindableHeader: View {
             
             Text(title)
                 .font(Font(Style.FontStyle.title))
-                .foregroundColor(.darkTitle)
+                .foregroundColor(.textSecondary) 
                 
         }
         .padding(.bottom, .marginMax)

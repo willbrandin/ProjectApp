@@ -22,7 +22,7 @@ struct ColorPickerRow: View {
                             .clipShape(Circle())
                             .frame(width: 30, height: 30)
                             .overlay(
-                                Circle().stroke(selectedColor == color ? Color.darkText : .clear, lineWidth: 1)
+                                Circle().stroke(selectedColor == color ? Color.textPrimary : .clear, lineWidth: 1)
                             )
                         
                         if selectedColor == color {
@@ -78,7 +78,7 @@ struct ProjectHeaderSelector: View {
                 } else if let selectedColor = selectedColor {
                     Color(selectedColor.colorRepresentation)
                 } else {
-                    Color.white
+                    Color.secondaryBackground
                 }
             }
             
